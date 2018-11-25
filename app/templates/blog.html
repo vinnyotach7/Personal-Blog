@@ -1,0 +1,53 @@
+{% extends 'base.html'%} 
+{% import "bootstrap/wtf.html" as wtf %} 
+{% block content %}
+
+<div class="container">
+    <a href="/"><i class="glyphicon glyphicon-menu-left"></i>Back</a>
+    <div class="row">
+            <div class="jumbotron" style="text-align:center">
+                    <p >These are more blogs from different people.</p>
+                    <p>You can as well add your blog here.</p>
+                </div>
+
+            <div class="col-md-8">
+        {% for blog in posts %}
+        
+        
+        <div class="panel panel-success panel-body">
+                <div class="panel panel-success panel-heading">  
+               
+            <h2 style="text-align:center">{{blog.heading}}</h2>
+            </div> 
+      
+        <p>  {{blog.blog}}</p>    
+     <p>By:{{ blog.user }}</p>
+        
+        <div class="card-footer">
+        <p>{{ blog.date_posted }}</p>
+    </div>
+    <a href="/comment"><i class="glyphicon glyphicon-comment"></i></a>
+    </div>
+
+        {% endfor %}
+        </div>
+        
+        <div class="col-md-4">
+            <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="glyphicon glyphicon-plus"></i>Add blog</a>
+
+            <div class="collapse multi-collapse" id="multiCollapseExample1" style=" padding:30px;">
+                <div class="card card-body">
+                    {{ wtf.quick_form(form) }}
+                    
+                   
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>
+
+{% endblock %}
