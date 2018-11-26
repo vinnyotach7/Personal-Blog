@@ -1,3 +1,5 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
 
 <!DOCTYPE html>
 
@@ -7,7 +9,7 @@
     <meta charset="utf-8"> {% if title %}
     <title> {{ title }}</title>
     {% else %}
-    <title> PITCH ALONG </title>
+    <title> PITCH </title>
     {% endif %}
     <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
@@ -16,41 +18,35 @@
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merienda:700|Pacifico" rel="stylesheet">
 </head>
-{% extends 'base.html'%} {% import 'macros.html' as macro%}
 
 <body>
 
 
     {% block content %}
     
-    <div class="image" style="padding:300px;background-image:url('http://deseta.info/wp-content/uploads/2018/04/interesting-office-table-top-view-full-size-of-furniture-intended-for-desk-tops-decor-4.jpg');background-size:cover;">
+    <div class="image" style="padding:300px;background-image:url('https://static1.squarespace.com/static/54b811e1e4b0a17414b3036f/t/54bea6e8e4b0705272ba773c/1421780713767/blog-1.jpg?format=1500w');background-size:cover;">
      
     </div>
         
     <div class="jumbotron">
              <div class="panel panel-primary panel-heading">
             <div class="container">
-                <h1 style="font-family: 'Cookie', cursive; text-align: center;">Hard Truths</h1>
+                <h1 style="font-family: 'Cookie', cursive; text-align: center;">Inspiration facts</h1>
                 <p>
                     The only part they told us about entrepreneurship was that we would be our own bosses. They never told us that we would fail
                     many times before we succeed. They never told us that we would work 5 times more than our employees and
                     not get anything sometimes. They never told us that this would cripple our credit score. That we will
-                    be in debt and owe alot of people money.
+                    be in debt and owe alot of people money.</p>
                     <p>No one said anything about the sleepless nights trying to figure out a way forward. No one told us
                         about the stress and anxiety. No one told us that this will cause conflict between us and or relatives,
                         and family members. No one told us that we would be jokes to the society especially when we start
                         changing from one business to another. No one told us that sometimes we will go six months or more
-                        without any income.
-                        <p> 
-                        <p>Living in the edge and surviving through borrowing money from different people.
-                        No one told us that our doors would be shut down due failure to pay staff, they can’t get to work.
-                    </p>
-                    <p> No one told us we would be hobos at some point. No one told us that our husbands wives, boyfriends
-                        and girlfriend's would leave us because they will not understand our journey. No one told us that
-                        we will have to be more than patient. </p>
-                    <p> That we would make so many mistakes end up losing alot of money. That at some point we would have
-                        to risk our lives in order to move forward.
-                    </p>
+                        without any income.</p>
+                        <p>It’s Not Whether You Get Knocked Down, It’s Whether You Get Up.</p>
+                    <p>Knowing Is Not Enough; We Must Apply. Wishing Is Not Enough; We Must Do.This piece of wisdom is one of my favorite quotes for students. It reminds us to apply what we learn and take action
+                    toward success, rather than waiting and hoping. </p>
+                    <p> You Learn More From Failure Than From Success. Don’t Let It Stop You. Failure Builds Character.When you replace ‘lose’ with ‘learn’ in your vocabulary, the thought of failure becomes less daunting and lets you
+                    focus on growth.</p>
 
                     <p>
                         We had to figure this out all by ourselves. Many gave up on the journey. Some died on the journey. But some of us after going
@@ -71,13 +67,6 @@
                     BLOGS
                     <i class="glyphicon glyphicon-arrow-right"></i></a></button></h2>
 
-
-
-
-
-
-
-
     </div>
     <section id="lab_social_icon_footer" style=" widows: 200px;background-size:cover;background-image:url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgICAcHCA0IBwcHBw0HBwcHCA8IDQcNFREWFhURExMYHSggGCYxIhUTITEhJSkrLi4uFx8zODMsNygtLisBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAHIBuwMBIgACEQEDEQH/xAAZAAADAQEBAAAAAAAAAAAAAAAAAQIDBAf/xAAaEAEBAQEBAQEAAAAAAAAAAAAAARESAiFB/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/APDrd+37b9tv6QAAAAAAAAAAAAADAgeHgEMMYBBWDALBisGAnArDwE4MVgwE4MVgwE4MXgwEYMXgwEYMXhYCcGKwYCcLF4WAnBisGAnCXhYCQrCwCJQBIPABAAAAAAAAAAAAAAAAAAAAAAMAAeHgFgw8PALBisPATgxWHgJwYvBgJwYvBgJwYvBgIw8XgwEYMacjAZ4MacjkGeDGnI5BngxpyMBngxpyWAzwY0wsBGFjTCwEYWNMLARhYvBgIwsXhYCcLF4WAnCVgwEkrCAgZAAAAAAAAAAYADDMCw8PDwCw8PDkBOHisPATh4rDwE4eKw8BODF4eAjDxeHyCORy05PkGfI5acnyDPkctOT5BlyOWvI5Blg5a8jkGXI5a8jkGXJcteRyDLkuWvJcgz5LGvJcgywsa4XIM8LGmFgM8LGmFgM8LGmFYDPCxphYCMLF4WAjCxWAEkogIAADAAGeHgFhyHDkASHIchyAWHIqQ5ALDxUhyAnFSKkOQEyHi55OeQRyrlc8nPII5PlpPJzyDPk+WnJ8gy5PlryfIMuRy15PkGXI5a8nyDHkctuS5BjyOW3I5BjyXLbkcgw5HLbkr5BjyXLbkr5BjyXLW+SvkGPJWNr5TfIMrE2NrE2AywrGtibAZYVjWxNgM8KxdhWAzwrGlibARhLpYCAeDAJQkOAIcgVIAkOQ5DkAYqQSKkApFSHIqQCkVIcipAKQ5FyKnkESKnlcip5BE8nPK55VPII5OeWk8qnkGc8ny0nlU8gynk+Ws8nyDLkctuT5BjyOW/A4BhyOW/A4BhyXLo4LkGHJct+S5BhfJct+SvkHPfJXy3vkr5BhfKeW98pvkGF8lfLa+U3yDGxNjaxN8gxsKxrYmwGVibGtibAZWJsa2JsBnYmxpYmwEWJsXYVgIpKpYAOA4BxUKKgCRUgkVIByKkEipAEipDkVIAkVIcipAKRchyKkApFSKkVICZ5VPK5FTyCJ5VPK55XPIM55VPLSeVTyDKeVctJ5VPIMp5PlrPJ8gx5PltyfIMORy35LkGHI5b8lyDC+S5b3yV8g575K+W98pvkGF8pvlvfKb5BhfKb5b3ym+QYXymxtYmwGN8osb2IsBjYmxrYmwGNibGtibAZWIsa2JsBlYmxpYmwGdibGlTQRYlaQKKhRUA4qFFQFRUhRUBUipCi4ByLkKRcgCRchSLkA5FyFIuQBIuQSLkASKkORcgFIqeVSKkAp5VPKpFSAmeVTyqRU8gieVTyueVTyDPkcteT5BjyOW/Jcgx5TfLfkr5BhfKb5b3ym+QYXyV8tr5TYDC+U3y2sTYDGxFjaxFgMbE2NrEWAxsRY2sRYDGxNjWxFgMrEWNbEWAzsRY0sRQZ2JsaVFgM7E1pUUEVK6kChgAuKgAK8rgALi4AC/KoYBcV5MAuLgALi4AC4uAAqLhgFRcIAqLgAKiiALhgAAACamgAVTQAQmgAip9AAiopgGdR6ABFR6ABFRQARUUAEekUAEVNABFTQARUgA//Z');">
         <p style="text-align:center;color: #dedede">Reach me out</p>
@@ -85,11 +74,10 @@
 
         <div class="container" >
             <div class="text-center center-block">
-                    <a href="https://github.com/Jeffmusa"><i id="social-gh" class="fa fa-github-square fa-3x social"></i></a>
-                <a href="https://www.facebook.com/tecno.myles"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
-                <a href="https://twitter.com/jeffreylamar9"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
-                <a href="https://www.instagram.com/jeffreylamar777"><i id="social-gp" class="fa fa-instagram fa-3x social"></i></a>
-                <a href="mailto:jeffmusa05@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+                    <a href="https://github.com/vinnyotach7"><i id="social-gh" class="fa fa-github-square fa-3x social"></i></a>
+                <a href="https://www.facebook.com/vinnyotach"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+                <a href="https://www.instagram.com/vinny_pirlo"><i id="social-gp" class="fa fa-instagram fa-3x social"></i></a>
+                <a href="mailto:vinnyotach7@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
             </div>
         </div>
     </section>
