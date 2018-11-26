@@ -26,7 +26,7 @@ class DevConfig(Config):
     Development  configuration child class
     '''
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringaschool:@localhost/blog'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringaschool:kalonje2018@localhost/blog'
 
 
 class ProdConfig(Config):
